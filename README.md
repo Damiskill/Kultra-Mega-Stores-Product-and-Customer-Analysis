@@ -6,10 +6,9 @@
 
 ---
 
-## 📖 Project Overview
+## 📖 Project Objective
 
-**Kultra Mega Stores (KMS)** is a Lagos-based retail and wholesale company specializing in **office supplies and furniture**.  
-The organization serves **individual consumers, small businesses, and large corporate clients** across Nigeria.
+To analyze sales, profit, and shipping data to uncover key business insights and answer strategic questions posed by management of **Kultra Mega Stores (KMS)** , a wholesale company specializing in **office supplies and furniture**. It serves **individual consumers, small businesses, and large corporate clients** across Nigeria.
 
 The two datasets used in this project are:
 
@@ -55,6 +54,8 @@ FROM OrderRecords
 GROUP BY ProductCategory
 ORDER BY TotalSales DESC;
 
+![SQL Server Output](https://github.com/Damiskill/Kultra-Mega-Stores-Product-and-Customer-Analysis/blob/main/1.png)
+
 ### **2️⃣ Top 3 and Bottom 3 regions in terms of sales**
 
 -- Top 3 Regions
@@ -73,6 +74,8 @@ FROM OrderRecords
 GROUP BY Region
 ORDER BY TotalSales ASC;
 
+![SQL Server Output](https://github.com/Damiskill/Kultra-Mega-Stores-Product-and-Customer-Analysis/blob/main/2.png)
+
 ### **3️⃣ What were the total sales of appliances in Ontario?**
 
 SELECT 
@@ -80,6 +83,10 @@ SELECT
 FROM OrderRecords
 WHERE ProductSubCategory = 'Appliances'
   AND Province = 'Ontario';
+  
+
+![SQL Server Output](https://github.com/Damiskill/Kultra-Mega-Stores-Product-and-Customer-Analysis/blob/main/3.png)
+
 
 ### **4️⃣ Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers**
 
@@ -93,6 +100,8 @@ SELECT TOP 10
 FROM OrderRecords
 GROUP BY CustomerName, CustomerSegment
 ORDER BY TotalSales ASC;
+
+![SQL Server Output](https://github.com/Damiskill/Kultra-Mega-Stores-Product-and-Customer-Analysis/blob/main/4.png)
 
 **Recommendations**
 
@@ -109,6 +118,8 @@ SELECT TOP 1
 FROM OrderRecords
 GROUP BY ShipMode
 ORDER BY TotalShippingCost DESC;
+
+![SQL Server Output](https://github.com/Damiskill/Kultra-Mega-Stores-Product-and-Customer-Analysis/blob/main/5.png)
 
 ## 📊 Case Scenario II — Customer and Profitability Insights
 
@@ -135,6 +146,8 @@ JOIN OrderRecords o
 GROUP BY t.CustomerName, t.CustomerSegment, o.ProductCategory
 ORDER BY t.CustomerName, CategorySales DESC;
 
+![SQL Server Output](https://github.com/Damiskill/Kultra-Mega-Stores-Product-and-Customer-Analysis/blob/main/6.png)
+
 ### **7️⃣ Which small business customer had the highest sales?**
 
 SELECT TOP 1 
@@ -144,6 +157,8 @@ FROM OrderRecords
 WHERE CustomerSegment = 'Small Business'
 GROUP BY CustomerName
 ORDER BY TotalSales DESC;
+
+![SQL Server Output](https://github.com/Damiskill/Kultra-Mega-Stores-Product-and-Customer-Analysis/blob/main/7.png)
 
 ### **8️⃣ Which corporate customer placed the most number of orders (2009–2012)?**
 
@@ -156,6 +171,8 @@ WHERE CustomerSegment = 'Corporate'
 GROUP BY CustomerName
 ORDER BY NumberOfOrders DESC;
 
+![SQL Server Output](https://github.com/Damiskill/Kultra-Mega-Stores-Product-and-Customer-Analysis/blob/main/8.png)
+
 ### **9️⃣ Which consumer customer was the most profitable one?**
 
 SELECT TOP 1 
@@ -165,6 +182,8 @@ FROM OrderRecords
 WHERE CustomerSegment = 'Consumer'
 GROUP BY CustomerName
 ORDER BY TotalProfit DESC;
+
+![SQL Server Output](https://github.com/Damiskill/Kultra-Mega-Stores-Product-and-Customer-Analysis/blob/main/9.png)
 
 ### **🔟 Which customer returned items, and what segment do they belong to?**
 
@@ -177,6 +196,8 @@ JOIN OrderStatus s
     ON o.OrderID = s.OrderID
 WHERE s.Status = 'Returned';
 
+![SQL Server Output](https://github.com/Damiskill/Kultra-Mega-Stores-Product-and-Customer-Analysis/blob/main/10.png)
+
 ### **1️⃣1️⃣ Was shipping cost appropriately spent based on Order Priority?**
 
 SELECT 
@@ -188,6 +209,8 @@ SELECT
 FROM OrderRecords
 GROUP BY OrderPriority, ShipMode
 ORDER BY OrderPriority, AvgShippingCost DESC;
+
+![SQL Server Output](https://github.com/Damiskill/Kultra-Mega-Stores-Product-and-Customer-Analysis/blob/main/11.png)
 
 **Interpretation:**
 
@@ -207,14 +230,6 @@ ORDER BY OrderPriority, AvgShippingCost DESC;
 | **Shipping**         | Certain methods costly                       | Align shipping mode with order priority      |
 | **Returns**          | Returned items from specific segments        | Review product quality & delivery efficiency |
 
----
-
-## 🧠 Tools & Technologies
-
-| Tool                 | Purpose                            |
-| -------------------- | ---------------------------------- |
-| **SQL Server**       | Data extraction and analysis       |
-| **GitHub**           | Version control and documentation  |
 
 ---
 
@@ -225,7 +240,6 @@ GitHub: [Damiskill](https://github.com/Damiskill)
 📧 [emmanuelphilip685d@gmail.com]
 💼 [LinkedIn Profile](https://linkedin.com/in/PhilipEmmanuel)
 **📅 Duration:** 2009 – 2012 dataset
-**📍 Location:** Lagos, Nigeria
 
 ---
 
