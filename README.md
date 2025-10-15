@@ -221,6 +221,7 @@ ORDER BY OrderPriority, AvgShippingCost DESC;
 ## 📚 Author
 
 **👤 Analyst:** *Emmanuel Philip*  
+GitHub: [Damiskill](https://github.com/Damiskill)
 📧 [emmanuelphilip685d@gmail.com]
 💼 [LinkedIn Profile](https://linkedin.com/in/PhilipEmmanuel)
 **📅 Duration:** 2009 – 2012 dataset
