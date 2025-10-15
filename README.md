@@ -1,7 +1,6 @@
 # 🏬 Kultra Mega Stores (KMS) — SQL Business Intelligence Analysis
 
 ![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat-square&logo=microsoftsqlserver&logoColor=white)
-![Excel](https://img.shields.io/badge/Microsoft%20Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
 ![Data Analysis](https://img.shields.io/badge/Business%20Intelligence-Analysis-blue?style=flat-square)
 ![Status](https://img.shields.io/badge/Project%20Stage-Completed-success?style=flat-square)
 
@@ -12,7 +11,7 @@
 **Kultra Mega Stores (KMS)** is a Lagos-based retail and wholesale company specializing in **office supplies and furniture**.  
 The organization serves **individual consumers, small businesses, and large corporate clients** across Nigeria.
 
-Two datasets were provided:
+The two datasets used in this project are:
 
 1. **OrderRecords**
 
@@ -221,7 +220,9 @@ ORDER BY OrderPriority, AvgShippingCost DESC;
 
 ## 📚 Author
 
-**👤 Analyst:** *Emmanuel Philip*    
+**👤 Analyst:** *Emmanuel Philip*  
+📧 [emmanuelphilip685d@gmail.com]
+💼 [LinkedIn Profile](https://linkedin.com/in/PhilipEmmanuel)
 **📅 Duration:** 2009 – 2012 dataset
 **📍 Location:** Lagos, Nigeria
 
